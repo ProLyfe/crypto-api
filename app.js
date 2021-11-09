@@ -6,7 +6,7 @@ fastify.get('/crypto', async(_, res) => {
     try {
         const response = await fetch('https://api.binance.com/api/v3/ticker/price');
         const body = await response.text();
-        console.log("Je suis un test")
+        console.log("Salut tout le monde")
         res.send(body);
     } catch (err) {
         console.error(err);
