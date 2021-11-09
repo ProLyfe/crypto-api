@@ -13,4 +13,6 @@ fastify.get('/crypto', async(_, res) => {
     };
 });
 
+console.log('Salut tout le monde');
+
 fastify.listen(PORT);
