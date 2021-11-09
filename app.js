@@ -1,5 +1,7 @@
 const fastify = require('fastify')({ logger: true });
 const fetch = require('node-fetch');
+const PORT = process.env.PORT || 3000
+
 
 fastify.get('/crypto', async(req, res) => {
     try {
@@ -8,8 +10,7 @@ fastify.get('/crypto', async(req, res) => {
         res.send(body);
     } catch (err) {
         console.error(err)
-    }
-    res.send(body);
+    };
 });
 
-fastify.listen(9000);
+fastify.listen(PORT);
